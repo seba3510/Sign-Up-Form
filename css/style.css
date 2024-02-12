@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sidebar-img {
+    height: stretch;
+    width: 500px;
+    position: absolute;
+
+}
