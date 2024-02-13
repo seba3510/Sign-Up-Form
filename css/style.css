@@ -13,9 +13,17 @@
 }
 
 .logo-container {
+    border: 5px solid green;
+    display: flex;
+    justify-content: space-around;
     position: absolute;
     background-color: rgba(10, 8, 8, 0.43);
     margin-top: 500px;
-    padding-left: 200px;
+    /* /* padding-left: 200px */
     padding-right: 230px;
+}
+
+.logo-info {
+    margin-top: 100px;
+
 }
