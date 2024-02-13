@@ -43,6 +43,10 @@
     margin-left: 50px;
 }
 
+.sidebar-footer {
+    display: flex;
+    color: white;
+    position: fixed;
+    margin-top: 965px;
 
-
-.sidebar-footer {}
+}
