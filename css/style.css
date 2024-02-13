@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,18 +23,26 @@
     position: absolute;
     background-color: rgba(10, 8, 8, 0.43);
     margin-top: 500px;
-    padding-left: 200px;
-    padding-right: 120px;
+    padding-right: 100px;
+
 }
 
 .logo-info {
     margin-top: 50px;
     margin-left: 15px;
     color: white;
+    font-size: 25px;
+    font-family: Orbitron;
+    font-weight: bold;
 
 }
 
 .vought-logo {
     height: 120px;
     margin-top: 10px;
+    margin-left: 50px;
 }
+
+
+
+.sidebar-footer {}
