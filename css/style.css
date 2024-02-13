@@ -10,20 +10,28 @@
     top: 0;
     left: 0;
     height: 100%;
+
 }
 
 .logo-container {
-    border: 5px solid green;
+
     display: flex;
     justify-content: space-around;
     position: absolute;
     background-color: rgba(10, 8, 8, 0.43);
     margin-top: 500px;
-    /* /* padding-left: 200px */
-    padding-right: 230px;
+    padding-left: 200px;
+    padding-right: 120px;
 }
 
 .logo-info {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-left: 15px;
+    color: white;
 
+}
+
+.vought-logo {
+    height: 120px;
+    margin-top: 10px;
 }
