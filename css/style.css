@@ -96,6 +96,21 @@ form {
     font-size: 1.45rem;
 
 
+
+}
+
+
+input {
+    border: 2px solid black;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1F2932;
+    color: white;
+    margin-top: 195px;
 }
 
 
