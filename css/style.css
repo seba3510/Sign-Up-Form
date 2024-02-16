@@ -50,3 +50,29 @@
     margin-top: 965px;
 
 }
+
+
+.details {
+    display: flex;
+    margin-left: 50px;
+}
+
+
+.para-one {
+    margin-left: 650px;
+    margin-top: 50px;
+
+}
+
+
+.para-two,
+.para-three {
+    margin-top: 50px;
+}
+
+
+.para-one,
+.para-two,
+.para-three {
+    font-size: 1.2rem;
+}
