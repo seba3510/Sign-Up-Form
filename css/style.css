@@ -75,4 +75,29 @@
 .para-two,
 .para-three {
     font-size: 1.2rem;
+
+}
+
+
+form {
+
+    margin-top: 150px;
+    margin-left: 100px;
+
+
+
+}
+
+.row-one {
+    display: flex;
+    margin-left: 600px;
+    gap: 100px;
+}
+
+.row-two,
+.row-three {
+    display: flex;
+    margin-top: 25px;
+    margin-left: 600px;
+    gap: 100px;
 }
