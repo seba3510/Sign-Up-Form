@@ -85,7 +85,7 @@
                     First name
 
                     <div>
-                        <input type="text" name="fname" id="fname">
+                        <input type="text" name="fname" id="fname" required>
                     </div>
                 </label>
 
@@ -95,7 +95,7 @@
 
                     <div>
 
-                        <input type="text" name="lastName" id="lname">
+                        <input type="text" name="lastName" id="lname" required>
                     </div>
                 </label>
             </section>
@@ -109,7 +109,7 @@
                     Email
 
                     <div>
-                        <input type="email" name="emailAddress" id="email">
+                        <input type="email" name="emailAddress" id="email" required>
                     </div>
                 </label>
 
@@ -117,7 +117,7 @@
                 <label for="phoneNumer">
                     Phone Number
                     <div>
-                        <input type="tel" name="phone" id="phoneNumber">
+                        <input type="tel" name="phone" id="phoneNumber" required>
                     </div>
                 </label>
             </section>
@@ -128,7 +128,7 @@
                     Password
 
                     <div>
-                        <input type="password" name="pwd" id="pass">
+                        <input type="password" name="pwd" id="pass" required minlength="14" maxlength="16">
                     </div>
                 </label>
 
@@ -137,7 +137,7 @@
                     Confirm Password
 
                     <div>
-                        <input type="password" name="confirmPwd" id="confirmPass">
+                        <input type="password" name="confirmPwd" id="confirmPass" minlength="14" maxlength="16">
                     </div>
                 </label>
             </section>
