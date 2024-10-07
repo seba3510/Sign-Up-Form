@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.homelander-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    background-color: rgba(10, 8, 8, 0.43);
+    margin-top: 880px;
+    padding-right: 1080px;
+}
