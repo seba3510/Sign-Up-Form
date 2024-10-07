@@ -7,7 +7,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    /* height: 100%; */
 
 
 }
@@ -15,9 +15,27 @@
 
 .logo-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     position: absolute;
     background-color: rgba(10, 8, 8, 0.43);
     margin-top: 880px;
-    padding-right: 1080px;
+    padding-right: 108px;
+
+
+}
+
+
+.logo-container>p {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 70px;
+    margin-right: 125px;
+
+
+}
+
+.vought-logo {
+    display: flex;
+    justify-content: center;
+    padding-left: 300px;
 }
