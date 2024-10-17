@@ -45,3 +45,14 @@
 .vought-logo {
     margin-left: 150px;
 }
+
+section.invitation-msg {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.para-one {
+    margin-right: 250px;
+}
