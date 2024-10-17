@@ -14,35 +14,34 @@
     left: 0;
     height: 100%;
 
-
 }
 
 
 .logo-container {
     display: flex;
-    justify-content: center;
+    /* flex-wrap: wrap; */
     position: absolute;
     background-color: rgba(10, 8, 8, 0.43);
-    margin-top: 880px;
-    padding-right: 108px;
-
+    /* padding-right: 108px; */
+    margin-top: 525px;
 
 }
 
 
-.logo-container>p {
-    font-weight: bold;
-    font-size: 4rem;
-    margin-top: 70px;
-    margin-right: 125px;
-    font-family: "Iceland-Regular";
 
+.logo-container>p {
+
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-top: 70px;
+    /* margin-right: 125px; */
+    font-family: "Iceland-Regular";
+    margin-right: 100px;
+    padding-right: 50px;
 
 
 }
 
 .vought-logo {
-    display: flex;
-    justify-content: center;
-    padding-left: 300px;
+    margin-left: 150px;
 }
