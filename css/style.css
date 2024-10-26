@@ -4,8 +4,8 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0vh;
+    padding: 0vh;
 }
 
 .homelander-img {
@@ -24,9 +24,8 @@
     background-color: rgba(10, 8, 8, 0.43);
     /* padding-right: 108px; */
     margin-top: 525px;
-
+    ;
 }
-
 
 
 .logo-container>p {
@@ -47,25 +46,26 @@
 }
 
 .para-one {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 90px;
-    font-size: 2rem;
-    margin-right: 200px;
+    margin-top: 5vh;
+    font-size: 2em;
+    /* margin-left: 70vw; */
+    margin-left: 70vh;
+
 }
 
 
 .para-two {
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
     margin-top: 50px;
     font-size: 2rem;
-    margin-right: 150px;
+    /* margin-right: 150px; */
+
 }
 
 .para-three {
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
     margin-top: 50px;
     margin-right: 400px;
     /* margin-left:; */
