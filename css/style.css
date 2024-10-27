@@ -61,7 +61,7 @@
 .para-two {
     /* display: flex;
     justify-content: flex-end; */
-    margin-top: 5em;
+    margin-top: 2em;
     font-size: 2rem;
     /* margin-right: 150px; */
     /* margin-right: 100rem ; */
@@ -70,10 +70,7 @@
 }
 
 .para-three {
-    /* display: flex;
-    justify-content: flex-end; */
-    margin-top: 50px;
-    margin-right: 400px;
-    /* margin-left:; */
     font-size: 2rem;
+    margin-top: 2em;
+    margin-left: 29em;
 }
