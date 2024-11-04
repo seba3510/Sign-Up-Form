@@ -11,18 +11,18 @@
 
 
 .homelander-img {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-
+    /* object-position: ; */
 }
 
 
 .logo-container {
     display: flex;
     /* flex-wrap: wrap; */
-    position: absolute;
+    position: fixed;
     background-color: rgba(10, 8, 8, 0.43);
     /* padding-right: 108px; */
     /* margin-top: 525px; */
@@ -49,9 +49,8 @@
 }
 
 .para-one {
-    margin-top: 5vh;
-    /* font-size: 2em; */
-    font-size: 2rem;
+    margin-top: 2rem;
+    font-size: 2em;
     /* margin-left: 70vw; */
     margin-left: 70vh;
 
@@ -73,4 +72,42 @@
     font-size: 2rem;
     margin-top: 2em;
     margin-left: 29em;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    border: 5px solid blue;
+    margin-top: 10em;
+    margin-left: 60em;
+    padding: 5em;
+}
+
+form {
+    display: flex;
+    gap: 50px;
+}
+
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 10em;
+    border: 10px solid red;
+
+}
+
+
+.sign-up-btn {
+    margin-right: 10em;
+}
+
+
+input:invalid {
+    border: 2px red;
 }
