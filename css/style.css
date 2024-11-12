@@ -15,22 +15,23 @@
     top: 0;
     left: 0;
     height: 100%;
-    /* display: block; */
+    display: block;
 }
 
 
 .logo-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 66.7vw;
-    position: absolute;
+    position: fixed;
     margin-top: 29em;
+    /* justify-content: stretch; */
+    align-items: center;
     background-color: rgba(10, 8, 8, 0.43);
+    width: 66.7vh;
 
 }
 
-.logo-container>p {
+.text-container>p {
+    /* direction: flex; */
     font-size: 2.5rem;
     font-weight: bold;
     font-family: "Norse-Bold";
@@ -77,3 +78,5 @@
 input:invalid {
     border: 2px red;
 }
+
+7
