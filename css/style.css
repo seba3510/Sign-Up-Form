@@ -30,7 +30,7 @@
 
 
 .logo-container>p {
-    display: flex;
+    /* display: flex; */
     font-weight: bold;
     font-size: 2.6rem;
     margin-top: 70px;
@@ -64,7 +64,10 @@
 }
 
 .form-container {
-    margin-left: 100em;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65em;
+    margin-top: 8%;
 
 }
 
