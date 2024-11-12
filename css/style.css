@@ -15,17 +15,17 @@
     top: 0;
     left: 0;
     height: 100%;
-    max-width: 100%;
     display: block;
 }
 
 
 .logo-container {
     display: flex;
+    justify-content: center;
     position: fixed;
     width: 853px;
     background-color: rgba(10, 8, 8, 0.43);
-    margin-top: 30rem;
+    margin-top: 500px;
 }
 
 
@@ -43,7 +43,7 @@
 
 .para-one {
     margin-top: 2rem;
-    font-size: 2em;
+    font-size: 2rem;
     /* margin-left: 70vw; */
     margin-left: 70vh;
 
@@ -51,18 +51,16 @@
 
 
 .para-two {
-    /* display: flex;
-    justify-content: flex-end; */
     margin-top: 2em;
     font-size: 2rem;
-    margin-left: 29em;
+    margin-left: 70vh;
 
 }
 
 .para-three {
     font-size: 2rem;
     margin-top: 2em;
-    margin-left: 29em;
+    margin-left: 70vh;
 }
 
 .form-container {
