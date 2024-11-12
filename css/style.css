@@ -22,27 +22,19 @@
 
 .logo-container {
     display: flex;
-    /* flex-wrap: wrap; */
     position: fixed;
+    width: 853px;
     background-color: rgba(10, 8, 8, 0.43);
-    /* padding-right: 108px; */
-    /* margin-top: 525px; */
-    /* max-width: 100%; */
-    /* width: 68.1%; */
     margin-top: 30rem;
 }
 
 
 .logo-container>p {
-
+    display: flex;
     font-weight: bold;
-    font-size: 2.4em;
+    font-size: 2.6rem;
     margin-top: 70px;
-    /* margin-right: 125px; */
     font-family: "Iceland-Regular";
-    margin-right: 100px;
-    padding-right: 50px;
-
 }
 
 .vought-logo {
