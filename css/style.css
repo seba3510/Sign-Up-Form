@@ -15,7 +15,8 @@
     top: 0;
     left: 0;
     height: 100%;
-    /* object-position: ; */
+    max-width: 100%;
+    display: block;
 }
 
 
@@ -62,8 +63,6 @@
     justify-content: flex-end; */
     margin-top: 2em;
     font-size: 2rem;
-    /* margin-right: 150px; */
-    /* margin-right: 100rem ; */
     margin-left: 29em;
 
 }
@@ -74,38 +73,13 @@
     margin-left: 29em;
 }
 
-
 .form-container {
-    display: flex;
-    justify-content: center;
-    border: 5px solid blue;
-    margin-top: 10em;
-    margin-left: 60em;
-    padding: 5em;
-}
-
-form {
-    display: flex;
-    gap: 50px;
-}
-
-
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-.btn-container {
-    display: flex;
-    margin-top: 10em;
-    border: 10px solid red;
+    margin-left: 100em;
 
 }
 
 
-.sign-up-btn {
-    margin-right: 10em;
-}
+
 
 
 input:invalid {
