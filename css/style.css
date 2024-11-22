@@ -15,7 +15,6 @@
     top: 0;
     left: 0;
     height: 100%;
-    display: block;
 }
 
 
@@ -31,8 +30,9 @@
 }
 
 .text-container>p {
-    /* direction: flex; */
-    font-size: 2.5rem;
+    direction: flex;
+    justify-content: stretch;
+    font-size: 3rem;
     font-weight: bold;
     font-family: "Norse-Bold";
 }
@@ -63,20 +63,49 @@
     margin-left: 70vh;
 }
 
-.form-container {
+form {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70em;
+    margin-top: 15em;
+    border: 5px solid blue;
+}
+
+
+.col-one>div {
     display: flex;
     flex-direction: column;
-    margin-left: 65em;
-    margin-top: 8%;
+    gap: 3px;
+    font-size: 2rem;
+}
+
+
+.col-two>div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+    gap: 3px;
+    font-size: 2rem;
+}
+
+input {
+    font-size: large;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    margin-top: 3em;
+    margin-left: 5em;
+
 
 }
 
 
+.sign-up-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-
-
-input:invalid {
-    border: 2px red;
 }
-
-7

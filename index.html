@@ -55,41 +55,47 @@
         </p>
     </section>
 
-    <div class="form-container">
-        <form action="" method="get">
-            <div class="row-one">
+    <form action="" method="get">
+        <div class="col-one">
+            <div>
                 <label for="first_name">First Name</label>
-                <input type="text" name="fname" id="fname" required>
-
-
-                <label for="last_name">Last Name</label>
-                <input type="text" name="lname" id="lname" required>
+                <input type="text" name="first_name" id="first_name">
             </div>
 
-
-            <div class="row-two">
+            <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-
-                <label for="phone_number">Phone Number</label>
-                <input type="tel" name="phoneNumber" id="phoneNumber" required>
+                <input type="email" name="email" id="email">
             </div>
 
-
-            <div class="row-three">
+            <div>
                 <label for="password">Password</label>
                 <input type="password" name="pwd" id="pwd">
+            </div>
+        </div>
 
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPwd" id="confirmPwd">
+
+        <div class="col-two">
+            <div>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name">
+            </div>
+
+            <div>
+                <label for="phone_number">Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number">
+            </div>
+
+            <div>
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password">
             </div>
 
             <div class="btn-container">
-                <input type="button" value="Sign Up">
+                <input type="submit" value="Sign Up" class="sign-up-btn">
             </div>
+        </div>
+    </form>
 
-        </form>
-    </div>
 
 
 
