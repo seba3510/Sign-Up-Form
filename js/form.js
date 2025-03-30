@@ -1,23 +1,98 @@
-const firstNameElem = document.querySelector("#first_name");
+const firstNameElem = 
+	document.querySelector("#first_name");
 
-const lastNameElem = document.querySelector("#last_name");
+const lastNameElem = 
+	document.querySelector("#last_name")
 
-const emailElem = document.querySelector("#email");
+const emailElem = 
+	document.querySelector("#email")
 
-const phoneNumberElem = document.querySelector("#phoneNumber");
+const phoneNumberElem = 
+	document.querySelector("#phoneNumber");
 
-const passwordElem = document.querySelector("#pwd");
+const passwordElem = 
+	document.querySelector("#pwd");
 
-const signUpBtnElem = document.querySelector("#sign-up-btn");
+const signUpBtnElem = 
+	document.querySelector("#sign-up-btn");
 
 //================================================================================================
 
 function signUpBtnClick() {
-	signUpBtnElem.addEventListener("click", () => {
-		const msg = "You have clicked me!";
+	
+	signUpBtnElem.addEventListener ("click", () => {
 
-		alert(msg);
-	});
+		let isDataValid = 
+			isValidData();
+
+		if (isDataValid) {
+
+			alert("Successful log in");
+
+		} // if
+
+	}); // addEventListener()
+
 } // signUpBtnClick()
 
-signUpBtnClick();
+//================================================================================================
+
+function isValidData() {
+
+	const firstNameString = 
+		firstNameElem.value;
+
+	const lastNameString = 
+		lastNameElem.value;
+
+	let isFirstNameValid = 
+		isValidPattern(firstNameString);
+
+    let isLastNameValid =
+		isValidPattern(lastNameString);
+		
+	return isFirstNameValid &&
+			isLastNameValid;
+		
+} // isValidData()
+
+//================================================================================================
+
+function isValidPattern(str) {
+
+	const pattern = 
+		"^([A-Z]{1})([a-z]+)$";
+
+	const  matches = 
+		str.match(pattern);
+
+	if (!matches) {
+
+		const err = 
+			"Invalid pattern!";
+
+		showError(err);
+
+		return false;
+
+	} // if
+
+
+	
+
+	return true;
+	
+} // isValidPattern()
+
+//================================================================================================
+
+function showError
+	(
+		message
+	) {
+
+		alert(message);
+	
+} // showError()
+
+signUpBtnClick()
