@@ -1,76 +1,103 @@
-const firstNameElem = document.querySelector("#first_name");
+const firstNameElem = 
+	document.querySelector("#first_name");
 
-const lastNameElem = document.querySelector("#last_name");
+const lastNameElem = 
+	document.querySelector("#last_name");
 
-const emailElem = document.querySelector("#email");
+const emailElem = 
+	document.querySelector("#email");
 
-const phoneNumberElem = document.querySelector("#phoneNumber");
+const phoneNumberElem = 
+	document.querySelector("#phoneNumber");
 
-const passwordElem = document.querySelector("#pwd");
+const passwordElem = 
+	document.querySelector("#pwd");
 
-const signUpBtnElem = document.querySelector("#sign-up-btn");
+const signUpBtnElem = 
+	document.querySelector("#sign-up-btn");
 
 //================================================================================================
 
 function signUpBtnClick() {
+
 	signUpBtnElem.addEventListener("click", () => {
-		let isDataValid = isValidData();
+
+		try {
+
+			const isDataValid = 
+			isValidData();
 
 		if (isDataValid) {
-			alert("Successful log in");
+
+			const msg = 
+				"You have signed up successfully!";
+
+			alert(msg);
+
 		} // if
+			
+		} // try
+		
+		catch (error) {
+
+			const err =
+				error.message;
+
+			showError(err);
+			
+		} // catch
+
 	}); // addEventListener()
+
 } // signUpBtnClick()
 
 //================================================================================================
 
 function isValidData() {
-	const firstNameString = firstNameElem.value;
 
-	const lastNameString = lastNameElem.value;
+	const firstName = 
+		firstNameElem.value;
 
-	let isFirstNameValid = isFirstNameValid(firstNameString);
+	const firstNameErr =
+		"The first name";
 
-	let isLastNameValid = isLastNameValid(lastNameString);
+	const isFirstNameValid =
+		isValidPattern
+		(
+			firstName,
+			firstNameErr
+		);
 
-	return isFirstNameValid && isLastNameValid;
+		return isFirstNameValid;
+
 } // isValidData()
 
 //================================================================================================
 
-function isFirstNameValid(firstName) {
-	const pattern = "^([A-Z]{1})([a-z]+)$";
+function isValidPattern(str, name) {
 
-	const matches = str.match(pattern);
+	const pattern = 
+		"^([A-Z]{1})([a-z]+)$";
 
-	if (!matches) {
-		const err = "Invalid first name.";
+	const regex =
+		new RegExp(pattern);
 
-		showError(err);
+	const matches =
+		regex.test(str);
 
-		return false;
-	} // if
+		if(!matches){
+
+			const errorMsg =
+				`${name} is invalid.`
+
+			throw new Error(errorMsg);
+
+			return false;
+
+		} // if
 
 	return true;
 } // isValidPattern()
-
-//================================================================================================
-
-function isLastNameValid(lastName) {
-	const pattern = "^([A-Z]{1})([a-z]+)$";
-
-	const matches = str.match(pattern);
-
-	if (!matches) {
-		const err = "Invalid last name.";
-
-		showError(err);
-
-		return false;
-	} // if
-
-	return true;
-} // isLastNameValid()
 
 //================================================================================================
 
