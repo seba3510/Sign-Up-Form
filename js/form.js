@@ -20,14 +20,13 @@ const signUpBtnElem =
 
 function signUpBtnClick() {
 
-	signUpBtnElem.addEventListener("click", () => {
+	signUpBtnElem.addEventListener("click", (event) => {
+
+		event.preventDefault();
 
 		try {
 
-			const isDataValid = 
-			isValidData();
-
-		if (isDataValid) {
+		if (isDataValid()) {
 
 			const msg = 
 				"You have signed up successfully!";
@@ -53,53 +52,176 @@ function signUpBtnClick() {
 
 //================================================================================================
 
-function isValidData() {
-
-	const firstName = 
-		firstNameElem.value;
-
-	const firstNameErr =
-		"The first name";
+function isDataValid() {
 
 	const isFirstNameValid =
-		isValidPattern
-		(
-			firstName,
-			firstNameErr
-		);
+		checkFirstName();
 
-		return isFirstNameValid;
+	const isLastNameValid =
+		checkLastName();
+
+	const isEmailValid =
+		checkEmail();
+
+		return isFirstNameValid
+				&& isLastNameValid
+				&& isEmailValid;
 
 } // isValidData()
 
 //================================================================================================
 
-function isValidPattern(str, name) {
+function checkFirstName(){
+
+	const firstName =
+		firstNameElem.value.trim();
 
 	const pattern = 
-		"^([A-Z]{1})([a-z]+)$";
+		"^([A-Z]{1})([a-z]{3,15})$";
 
 	const regex =
 		new RegExp(pattern);
 
 	const matches =
-		regex.test(str);
+		regex.test(firstName);
 
-		if(!matches){
+	let isValid = false;
 
-			const errorMsg =
-				`${name} is invalid.`
+	const isEmpty =
+		firstName === "";
 
-			throw new Error(errorMsg);
+	let err = "";
 
-			return false;
+	if(isEmpty){
 
-		} // if
+		err =
+			"The first name is required.";
 
-	return true;
-} // isValidPattern()
+		throw new Error(err);
+
+	} // if
+
+	else if(!matches){
+
+		err =
+			`The first name must begin with an uppercase letter, and must be between 3 and 15 characters.`;
+
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+	return isValid;
+
+} // checkFirstName()
 
 //================================================================================================
+
+function checkLastName(){
+
+	const lastName =
+		lastNameElem.value.trim();
+
+	const pattern = 
+		"^([A-Z]{1})([a-z]{3,15})$";
+
+	const regex =
+		new RegExp(pattern);
+
+	const matches =
+		regex.test(lastName);
+
+	let isValid = false;
+
+	const isEmpty =
+		lastName === "";
+
+	let err = "";
+
+	if(isEmpty){
+
+		err =
+			"The last name is required.";
+
+		throw new Error(err);
+
+	} // if
+
+	else if(!matches){
+
+		err =
+			"The last name must begin with an uppercase letter, and must be between 3 and 15 characters.";
+
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+	return isValid;
+
+} // checkLastName()
+
+//================================================================================================
+
+function checkEmail(){
+
+	const email =
+		emailElem.value.trim();
+
+	const pattern =
+		"^[^@]+@[^@]+\.[^@]+$";
+
+	const regex =
+		new RegExp(pattern);
+
+	const matches =
+		regex.test(email);
+
+	const isEmpty =
+		email === "";
+
+	let err = "";
+
+	let isValid = false;
+
+	if(isEmpty){
+
+		err = 
+			"The email address is required.";
+
+		throw new Error(err);
+
+	} // if
+
+	else if(!matches){
+
+		err = 
+			"Please enter a valid email address.";
+		
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+	return isValid;
+
+} // checkEmail()
+
 
 function showError(message) {
 	alert(message);
