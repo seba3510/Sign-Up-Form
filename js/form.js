@@ -8,7 +8,7 @@ const emailElem =
 	document.querySelector("#email");
 
 const phoneNumberElem = 
-	document.querySelector("#phoneNumber");
+	document.querySelector("#phone_number");
 
 const passwordElem = 
 	document.querySelector("#pwd");
@@ -62,10 +62,14 @@ function isDataValid() {
 
 	const isEmailValid =
 		checkEmail();
+	
+	const isPhoneNumberValid =
+		checkPhoneNumber();
 
 		return isFirstNameValid
 				&& isLastNameValid
-				&& isEmailValid;
+				&& isEmailValid
+				&& isPhoneNumberValid;
 
 } // isValidData()
 
@@ -221,6 +225,56 @@ function checkEmail(){
 	return isValid;
 
 } // checkEmail()
+
+//================================================================================================
+
+function checkPhoneNumber(){
+
+	const phoneNumber =
+		phoneNumberElem.value.trim();
+
+	const pattern =
+		"^(\(\d{3})\)\s(\d{3})-(\d{4})$";
+
+	const regex =
+		new RegExp(pattern);
+	
+	const matches =
+		regex.test(phoneNumber);
+
+	let isValid = false;
+
+	const isEmpty =
+		phoneNumber === "";
+	
+	let err = "";
+
+	if(isEmpty){
+
+		err = 
+			"The phone number is required.";
+		
+		throw new Error(err);
+
+	} // if
+
+	else if(!matches){
+
+		err =
+			"Please enter a valid phone number.\n"
+			+ "Example:  (555) 555-5555";
+
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+} // checkPhoneNumber()
 
 
 function showError(message) {
