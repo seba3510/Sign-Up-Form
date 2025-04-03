@@ -13,6 +13,9 @@ const phoneNumberElem =
 const passwordElem = 
 	document.querySelector("#pwd");
 
+const confirmPasswordElem =
+	document.querySelector("#confirm_password");
+
 const signUpBtnElem = 
 	document.querySelector("#sign-up-btn");
 
@@ -65,11 +68,19 @@ function isDataValid() {
 	
 	const isPhoneNumberValid =
 		checkPhoneNumber();
+	
+	const isPasswordValid =
+		checkPassword();
+	
+	const doPasswordsMatch =
+		confirmPassword();
 
 		return isFirstNameValid
 				&& isLastNameValid
 				&& isEmailValid
-				&& isPhoneNumberValid;
+				&& isPhoneNumberValid
+				&& isPasswordValid
+				&& doPasswordsMatch;
 
 } // isValidData()
 
@@ -81,7 +92,7 @@ function checkFirstName(){
 		firstNameElem.value.trim();
 
 	const pattern = 
-		"^([A-Z]{1})([a-z]{3,15})$";
+		/^([A-Z]{1})([a-z]{3,15})$/;
 
 	const regex =
 		new RegExp(pattern);
@@ -132,7 +143,7 @@ function checkLastName(){
 		lastNameElem.value.trim();
 
 	const pattern = 
-		"^([A-Z]{1})([a-z]{3,15})$";
+		/^([A-Z]{1})([a-z]{3,15})$/;
 
 	const regex =
 		new RegExp(pattern);
@@ -183,7 +194,7 @@ function checkEmail(){
 		emailElem.value.trim();
 
 	const pattern =
-		"^[^@]+@[^@]+\.[^@]+$";
+		/^[^@]+@[^@]+\.[^@]+$/;
 
 	const regex =
 		new RegExp(pattern);
@@ -234,7 +245,7 @@ function checkPhoneNumber(){
 		phoneNumberElem.value.trim();
 
 	const pattern =
-		"^(\(\d{3})\)\s(\d{3})-(\d{4})$";
+		/^(\(\d{3})\)\s(\d{3})-(\d{4})$/;
 
 	const regex =
 		new RegExp(pattern);
@@ -274,11 +285,123 @@ function checkPhoneNumber(){
 
 	} // else
 
+	return isValid;
+
 } // checkPhoneNumber()
 
+//================================================================================================
+
+function checkPassword(){
+
+	const password =
+		passwordElem.value.trim();
+
+	const pattern =
+		/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+
+	const regex =
+		new RegExp(pattern);
+	
+	const matches =
+		regex.test(password);
+	
+	const isEmpty =
+		password === "";
+
+	let isValid = false;
+	
+	let err = "";
+
+	if(isEmpty){
+
+		err =
+			"The password is required.";
+		
+		throw new Error(err);
+
+	} // if
+
+	else if(!matches){
+
+		err = 
+			"Please enter a valid password.\n\n"
+			+ "The password must have the following: \n"
+			+ "1. A minimum of 8 characters.\n"
+			+ "2. At least one uppercase letter.\n"
+			+ "3. At least one lowercase letter.\n"
+			+ "4. At least one digit.\n"
+			+ "5. At least one special character.";
+
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+	return isValid;
+
+} // checkPassword()
+
+//================================================================================================
+
+function confirmPassword(){
+
+	const confirmPwd =
+		confirmPasswordElem.value.trim();
+
+	const pwd =
+		passwordElem.value.trim();
+
+	const isEmpty =
+		confirmPwd === "";
+
+	let err = "";
+
+	let isValid = false;
+
+	const doPasswordsMatch =
+		confirmPwd === pwd;
+
+	if(isEmpty){
+
+		err = 
+			"Please confirm your password."
+
+		throw new Error(err);
+
+	} // if
+
+	else if(!doPasswordsMatch){
+
+		err =
+			"The passwords don't match.  Please try again.";
+
+		throw new Error(err);
+
+	} // else if
+
+	else{
+
+		isValid = true;
+
+	} // else
+
+	return isValid;
+
+} // confirmPasswords()
+
+//================================================================================================
 
 function showError(message) {
+
 	alert(message);
+
 } // showError()
+
+//================================================================================================
 
 signUpBtnClick();
