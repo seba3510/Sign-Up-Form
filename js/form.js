@@ -29,14 +29,14 @@ function signUpBtnClick() {
 
 		try {
 
-		if (isDataValid()) {
+			if (isDataValid()) {
 
-			const msg = 
-				"You have signed up successfully!";
+				const msg = 
+					"You have signed up successfully!";
 
-			alert(msg);
+				alert(msg);
 
-		} // if
+			} // if
 			
 		} // try
 		
@@ -119,7 +119,7 @@ function checkFirstName(){
 	else if(!matches){
 
 		err =
-			`The first name must begin with an uppercase letter, and must be between 3 and 15 characters.`;
+			"The first name is invalid."
 
 		throw new Error(err);
 
@@ -170,7 +170,7 @@ function checkLastName(){
 	else if(!matches){
 
 		err =
-			"The last name must begin with an uppercase letter, and must be between 3 and 15 characters.";
+			"The last name is invalid.";
 
 		throw new Error(err);
 
@@ -272,8 +272,7 @@ function checkPhoneNumber(){
 	else if(!matches){
 
 		err =
-			"Please enter a valid phone number.\n"
-			+ "Example:  (555) 555-5555";
+			"Please enter a valid phone number."
 
 		throw new Error(err);
 
@@ -324,13 +323,7 @@ function checkPassword(){
 	else if(!matches){
 
 		err = 
-			"Please enter a valid password.\n\n"
-			+ "The password must have the following: \n"
-			+ "1. A minimum of 8 characters.\n"
-			+ "2. At least one uppercase letter.\n"
-			+ "3. At least one lowercase letter.\n"
-			+ "4. At least one digit.\n"
-			+ "5. At least one special character.";
+			"Please enter a valid password.";
 
 		throw new Error(err);
 
@@ -352,7 +345,6 @@ function confirmPassword(){
 
 	const confirmPwd =
 		confirmPasswordElem.value.trim();
-
 	const pwd =
 		passwordElem.value.trim();
 
