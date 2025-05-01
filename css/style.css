@@ -8,15 +8,19 @@
     padding: 0;
 }
 
+#footer {
+    position: absolute;
+    margin-top: 80em;
+    margin-left: 15em;
 
+}
 
 .homelander-img {
     position: fixed;
-    top: 0;
     left: 0;
+    bottom: 0;
     height: 100%;
 }
-
 
 .logo-container {
     display: flex;
@@ -36,9 +40,6 @@
     font-weight: bold;
     font-family: "Norse-Bold";
 }
-
-
-
 
 
 .para-one {
@@ -107,4 +108,8 @@ input {
     flex-direction: row;
     justify-content: center;
 
+}
+
+#sidebar-container>footer {
+    margin-top: 2%;
 }

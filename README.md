@@ -11,3 +11,5 @@ This was done as part of [The Odin Project](https://www.theodinproject.com) **In
 * CSS
 * JavaScript
 
+## Video Walkthrough
+
