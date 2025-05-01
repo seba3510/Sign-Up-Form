@@ -11,5 +11,6 @@ This was done as part of [The Odin Project](https://www.theodinproject.com) **In
 * CSS
 * JavaScript
 
-## Video Walkthrough
+## Live Demo
+[Demo](https://seba3510.github.io/Sign-Up-Form/)
 
